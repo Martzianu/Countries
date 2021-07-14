@@ -1,0 +1,23 @@
+14-07-2021: Initial Push
+
+* Made the git repo: https://github.com/Martzianu/Countries.git
+* Made the DBGateway a little more scalable with the APIDataRequestorType
+* What I have to date:
+    ** Made the scheleton of the app. The 3 modules:
+        *** Controller Module (the UI)
+        *** Interactor Module (data requests and parsing)
+        *** DBModule (data fetching and returning)
+    ** An API call to the DB (getCountries)
+    ** Added several APIDataRequestors in order to demonstrate the ease of scalabilty (if somebody wants to use some other technology of data fetching, they can easily add and not modify the existing ones: Open-Close principle)
+
+Next Steps:
+    * check where the promises need to go
+    * parse the data from the getCountries API call into domain objects
+    * display a plain simple list of countries by name
+    * mock up some UI
+
+===========================================================================================================
+
+
+
+

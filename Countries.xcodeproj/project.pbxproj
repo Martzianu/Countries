@@ -12,6 +12,8 @@
 		7D2FBADE265D656D002BAC2D /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FBADD265D656D002BAC2D /* JSONParser.swift */; };
 		7D2FBAF5265D6E08002BAC2D /* CacheRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FBAF4265D6E08002BAC2D /* CacheRequestor.swift */; };
 		7D6E7A08269F14AB00BA89AF /* MockRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6E7A07269F14AB00BA89AF /* MockRequestor.swift */; };
+		7D6E7A1C269F1DD700BA89AF /* architecture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E7A1B269F1DD700BA89AF /* architecture.jpeg */; };
+		7D6E7A21269F1DF100BA89AF /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E7A20269F1DF100BA89AF /* Notes */; };
 		7D7F52A1265D555400878807 /* CountriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F52A0265D555400878807 /* CountriesApp.swift */; };
 		7D7F52A3265D555400878807 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F52A2265D555400878807 /* ContentView.swift */; };
 		7D7F52A5265D555700878807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7F52A4265D555700878807 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		7D2FBADD265D656D002BAC2D /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		7D2FBAF4265D6E08002BAC2D /* CacheRequestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheRequestor.swift; sourceTree = "<group>"; };
 		7D6E7A07269F14AB00BA89AF /* MockRequestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequestor.swift; sourceTree = "<group>"; };
+		7D6E7A1B269F1DD700BA89AF /* architecture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = architecture.jpeg; sourceTree = "<group>"; };
+		7D6E7A20269F1DF100BA89AF /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		7D7F529D265D555400878807 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7F52A0265D555400878807 /* CountriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesApp.swift; sourceTree = "<group>"; };
 		7D7F52A2265D555400878807 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,9 +130,19 @@
 			path = Parsers;
 			sourceTree = "<group>";
 		};
+		7D6E7A1A269F1DAF00BA89AF /* Non coding files */ = {
+			isa = PBXGroup;
+			children = (
+				7D6E7A1B269F1DD700BA89AF /* architecture.jpeg */,
+				7D6E7A20269F1DF100BA89AF /* Notes */,
+			);
+			path = "Non coding files";
+			sourceTree = "<group>";
+		};
 		7D7F5294265D555400878807 = {
 			isa = PBXGroup;
 			children = (
+				7D6E7A1A269F1DAF00BA89AF /* Non coding files */,
 				7D7F529F265D555400878807 /* Countries */,
 				7D7F52B1265D555700878807 /* CountriesTests */,
 				7D7F52BC265D555700878807 /* CountriesUITests */,
@@ -332,6 +346,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D7F52A8265D555700878807 /* Preview Assets.xcassets in Resources */,
+				7D6E7A1C269F1DD700BA89AF /* architecture.jpeg in Resources */,
+				7D6E7A21269F1DF100BA89AF /* Notes in Resources */,
 				7D7F52A5265D555700878807 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
