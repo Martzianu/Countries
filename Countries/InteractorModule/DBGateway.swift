@@ -36,8 +36,6 @@ internal class DBGateway {
             self.requestor = CacheRequestor()
         case .mock:
             self.requestor = MockRequestor()
-        default:
-            self.requestor = URLSessionRequestor()
         }
     }
 

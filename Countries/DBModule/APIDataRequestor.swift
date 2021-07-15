@@ -8,6 +8,8 @@
 
 /// interface with all the calls we need from the API
 
+import Promises
+
 protocol APIDataRequestor {
-    func fetchCountries()
+    func fetchCountries() -> Promise<Data?>
 }

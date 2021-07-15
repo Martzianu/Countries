@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import Promises
 
 internal class MockRequestor: APIDataRequestor {
     /// this is just for testing purposes
 
-    func fetchCountries() {
+    func fetchCountries() -> Promise<Data?> {
         //return hard-coded countries
+        return Promise(nil)
     }
 }

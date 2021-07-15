@@ -6,21 +6,27 @@
 //
 
 import Foundation
+import Promises
 
 class URLSessionRequestor: APIDataRequestor {
     /// this class implements the DataRequestor and uses the URLSession method to make API requests
 
-    func fetchCountries() {
-        guard let url = URL(string: Endpoints.countries) else { return }
+    func fetchCountries() -> Promise<Data?> {
+        guard let url = URL(string: Endpoints.countries) else { return Promise(nil) }
 
         var request = URLRequest(url: url)
         self.addDefaultHeadersTo(request: &request)
         request.httpMethod = HTTPMethods.get.rawValue
 
-        URLSession.shared.dataTask(with: request) {(data, response, error) in
-            guard let data = data else { return }
-            print(String(data: data, encoding: .utf8)!)
-        }.resume()
+        return Promise<Data?>(on: .global(qos: .background)) { (fullfill, reject) in
+            URLSession.shared.dataTask(with: request) {(data, response, error) in
+
+                guard let data = data else { return fullfill(nil) }
+                guard error == nil else { return reject (error ?? NSError(domain: "", code: 100, userInfo: nil)) }
+                fullfill(data)
+
+            }.resume()
+        }
     }
 
     private func addDefaultHeadersTo(request: inout URLRequest) {
