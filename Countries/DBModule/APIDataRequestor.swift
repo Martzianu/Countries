@@ -8,6 +8,13 @@
 
 /// interface with all the calls we need from the API
 
+import Promises
+
+enum APIErrors: Error {
+    case invalidRequest
+    case noData
+}
+
 protocol APIDataRequestor {
-    func fetchCountries()
+    func fetchCountries() -> Promise<Data?>
 }

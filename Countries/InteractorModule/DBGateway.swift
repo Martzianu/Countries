@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Promises
 //import DBModule
 
 internal enum APIRequestorTypes {
@@ -36,12 +37,10 @@ internal class DBGateway {
             self.requestor = CacheRequestor()
         case .mock:
             self.requestor = MockRequestor()
-        default:
-            self.requestor = URLSessionRequestor()
         }
     }
 
-    func fetchCountries() {
+    func fetchCountries() -> Promise<Data?> {
         self.requestor.fetchCountries()
     }
 }

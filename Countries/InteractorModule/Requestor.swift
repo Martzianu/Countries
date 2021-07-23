@@ -6,18 +6,19 @@
 //
 
 import Foundation
+import Promises
 
 internal class Requestor {
 
     /// if somebody wants to use a certain type of data fetching technology, they just select the desired requestor type
     /// Use case: new bombastic technology, but no time to convert all previous API Calls.
-    private var dbGateway: DBGateway = DBGateway(requestorType: .urlSession)
+    private var dbGateway: DBGateway = DBGateway(requestorType: .mock)
 
-    func getCountries() -> [Country] {
+    func fetchCountries() -> Promise<[CountryDTO]> {
         self.dbGateway.fetchCountries()
-
-        /// here we need to check what kind of DTO we have and use the correct parser
-        let parser: JSONParser = JSONParser()
-        return parser.parseCountries(json: [:])
+            .then { data in
+                let parser: JSONParser = JSONParser()
+                return Promise(parser.parseCountries(data: data))
+            }
     }
 }

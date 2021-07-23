@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import Promises
 
 class AlamofireRequestor: APIDataRequestor {
     /// this class implements the DataRequestor and uses Alamofire technology to make API calls
 
-    func fetchCountries() {
+    func fetchCountries() -> Promise<Data?> {
         fatalError("implement")
     }
 }

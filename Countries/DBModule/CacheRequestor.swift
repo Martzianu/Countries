@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import Promises
 
 class CacheRequestor: APIDataRequestor {
 
     /// if we want to get data from the Cache and not the web, use this
-    func fetchCountries() {
+    func fetchCountries() -> Promise<Data?> {
         fatalError("implement")
     }
 }

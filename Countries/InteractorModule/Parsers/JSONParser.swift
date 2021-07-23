@@ -9,7 +9,15 @@ import Foundation
 
 internal class JSONParser {
 
-    func parseCountries(json: [String: String]) -> [Country] {
-        []
+    func parseCountries(data: Data?) -> [CountryDTO] {
+        let decoder: JSONDecoder = JSONDecoder()
+        guard let data = data else { return [] }
+        print(String(decoding: data, as: UTF8.self))
+        do {
+            let countries = try decoder.decode(CountryResponseDTO.self, from: data)
+            return countries.data ?? []
+        } catch {
+            return []
+        }
     }
 }

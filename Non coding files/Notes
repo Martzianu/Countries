@@ -18,6 +18,18 @@ Next Steps:
 
 ===========================================================================================================
 
+15-07-2021: Pods
+* Added pods
+* Added Promises
+* Using Promises in URLSession call
+
+===========================================================================================================
+
+23-07-2021: Parsing
+* Parsing the JSON into DTOs using Codable and sending the DTO to the view model VIA promises
+* added a MockCountries file 
+* tested the ease of switching between requestors
+
 
 
 
