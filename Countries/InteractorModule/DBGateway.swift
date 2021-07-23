@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Promises
 //import DBModule
 
 internal enum APIRequestorTypes {
@@ -39,7 +40,7 @@ internal class DBGateway {
         }
     }
 
-    func fetchCountries() {
+    func fetchCountries() -> Promise<Data?> {
         self.requestor.fetchCountries()
     }
 }

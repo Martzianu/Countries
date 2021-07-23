@@ -13,6 +13,15 @@ internal class MockRequestor: APIDataRequestor {
 
     func fetchCountries() -> Promise<Data?> {
         //return hard-coded countries
-        return Promise(nil)
+        if let path = Bundle.main.path(forResource: "MockCountries", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                return Promise(data)
+            } catch {
+                return Promise(APIErrors.noData)
+            }
+        }
+
+        return Promise(APIErrors.noData)
     }
 }

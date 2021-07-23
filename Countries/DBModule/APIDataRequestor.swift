@@ -10,6 +10,11 @@
 
 import Promises
 
+enum APIErrors: Error {
+    case invalidRequest
+    case noData
+}
+
 protocol APIDataRequestor {
     func fetchCountries() -> Promise<Data?>
 }

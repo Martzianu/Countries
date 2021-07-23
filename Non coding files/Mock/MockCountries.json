@@ -1,0 +1,19 @@
+{
+    "data": [{
+            "code": "RO",
+            "currencyCodes": ["RON"],
+            "name": "Romania",
+            "wikiDataId": "blabla1"
+        }, {
+            "code": "SOL",
+            "currencyCodes": ["SOL"],
+            "name": "Solaria",
+            "wikiDataId": "whatever"
+        }, {
+            "code": "MOR",
+            "currencyCodes": ["EYE"],
+            "name": "Mordor",
+            "wikiDataId": "d00m"
+        }
+    ]
+}

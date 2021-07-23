@@ -9,7 +9,7 @@ import Foundation
 
 internal class XMLParser {
 
-    func parseCountries(xml: [String: String]) -> [Country] {
+    func parseCountries(xml: [String: String]) -> [CountryDTO] {
         []
     }
 }

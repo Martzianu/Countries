@@ -11,6 +11,6 @@ class Countries: ObservableObject {
 
     init() {
         let vm = ScreensViewModel()
-        vm.getCountries()
+        vm.fetchCountries()
     }
 }
