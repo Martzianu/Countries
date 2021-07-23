@@ -11,8 +11,8 @@
     ** Added several APIDataRequestors in order to demonstrate the ease of scalabilty (if somebody wants to use some other technology of data fetching, they can easily add and not modify the existing ones: Open-Close principle)
 
 Next Steps:
-    * check where the promises need to go
-    * parse the data from the getCountries API call into domain objects
+    * check where the promises need to go =======> CHECK
+    * parse the data from the getCountries API call into domain objects 
     * display a plain simple list of countries by name
     * mock up some UI
 
@@ -29,6 +29,10 @@ Next Steps:
 * Parsing the JSON into DTOs using Codable and sending the DTO to the view model VIA promises
 * added a MockCountries file 
 * tested the ease of switching between requestors
+
+NEXT: 
+Show a list of countries
+Chain another promise with cities so once you tap on a country, you get the cities expanded
 
 
 
