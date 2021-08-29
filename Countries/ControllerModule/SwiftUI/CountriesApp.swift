@@ -9,11 +9,32 @@ import SwiftUI
 
 @main
 struct CountriesApp: App {
-    @StateObject var countries = Countries()
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                NavigationView {
+                    WelcomeView()
+                }
+                .tabItem {
+                    Image (systemName: "house")
+                    Text ("Home")
+                }
+                NavigationView {
+                    CountriesListView()
+                }
+                .tabItem {
+                    Image (systemName: "list.bullet")
+                    Text ("Countries")
+                }
+
+                NavigationView {
+                    CountriesMapView()
+                }
+                .tabItem {
+                    Image (systemName: "map")
+                    Text ("Map")
+                }
+            }
         }
     }
 }

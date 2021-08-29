@@ -14,4 +14,8 @@ class CacheRequestor: APIDataRequestor {
     func fetchCountries() -> Promise<Data?> {
         fatalError("implement")
     }
+
+    func fetchCitiesFor(countriesIds: [String]) -> Promise<Data?> {
+        fatalError("not implemented")
+    }
 }

@@ -12,10 +12,20 @@ internal class JSONParser {
     func parseCountries(data: Data?) -> [CountryDTO] {
         let decoder: JSONDecoder = JSONDecoder()
         guard let data = data else { return [] }
-        print(String(decoding: data, as: UTF8.self))
         do {
             let countries = try decoder.decode(CountryResponseDTO.self, from: data)
             return countries.data ?? []
+        } catch {
+            return []
+        }
+    }
+
+    func parseCities(data: Data?) -> [CityDTO] {
+        let decoder: JSONDecoder = JSONDecoder()
+        guard let data = data else { return [] }
+        do {
+            let cities = try decoder.decode(CityResponseDTO.self, from: data)
+            return cities.data ?? []
         } catch {
             return []
         }

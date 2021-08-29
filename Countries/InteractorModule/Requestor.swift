@@ -12,13 +12,21 @@ internal class Requestor {
 
     /// if somebody wants to use a certain type of data fetching technology, they just select the desired requestor type
     /// Use case: new bombastic technology, but no time to convert all previous API Calls.
-    private var dbGateway: DBGateway = DBGateway(requestorType: .mock)
+    private var dbGateway: DBGateway = DBGateway(requestorType: .urlSession)
 
     func fetchCountries() -> Promise<[CountryDTO]> {
         self.dbGateway.fetchCountries()
             .then { data in
                 let parser: JSONParser = JSONParser()
                 return Promise(parser.parseCountries(data: data))
+            }
+    }
+
+    func fetchCitiesFor(countriesIds: [String]) -> Promise<[CityDTO]> {
+        self.dbGateway.fetchCitiesFor(countriesIds: countriesIds)
+            .then { data in
+                let parser: JSONParser = JSONParser()
+                return Promise(parser.parseCities(data: data))
             }
     }
 }

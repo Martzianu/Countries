@@ -24,4 +24,8 @@ internal class MockRequestor: APIDataRequestor {
 
         return Promise(APIErrors.noData)
     }
+
+    func fetchCitiesFor(countriesIds: [String]) -> Promise<Data?> {
+        fatalError("not implemented")
+    }
 }

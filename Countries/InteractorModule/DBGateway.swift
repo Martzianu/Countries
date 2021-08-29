@@ -43,4 +43,8 @@ internal class DBGateway {
     func fetchCountries() -> Promise<Data?> {
         self.requestor.fetchCountries()
     }
+
+    func fetchCitiesFor(countriesIds: [String]) -> Promise<Data?> {
+        self.requestor.fetchCitiesFor(countriesIds: countriesIds)
+    }
 }

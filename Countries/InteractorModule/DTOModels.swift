@@ -7,20 +7,26 @@
 
 import Foundation
 
-// MARK: - CountryResponseDTO
 struct CountryResponseDTO: Codable {
     let data: [CountryDTO]?
 }
 
-// MARK: - Datum
 struct CountryDTO: Codable {
     let code: String?
     let currencyCodes: [String]?
-    let name, wikiDataID: String?
+    let name, wikiDataId: String?
 
 }
 
-struct City: Codable {
+struct CityResponseDTO: Codable {
+    let data: [CityDTO]?
+}
+
+struct CityDTO: Codable {
     var id: Int
     var name: String
+    var country: String
+    var latitude: Double
+    var longitude: Double
+    var population: Int64
 }

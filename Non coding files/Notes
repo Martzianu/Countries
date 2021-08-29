@@ -34,6 +34,8 @@ NEXT:
 Show a list of countries
 Chain another promise with cities so once you tap on a country, you get the cities expanded
 
+===========================================================================================================
 
+28-08-2021
 
-
+Show countries list -> tap a country -> fetch the cities and the cities next to it and display in a list. the cities next to one city, will be displayed as a subdivision of the cell (which is a city)

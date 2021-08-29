@@ -8,10 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        WindowGroup {
+            TabView {
+                NavigationView {
+                    CountriesListView()
+                }
+                .tabItem {
+                    Image (systemName: "list.bullet")
+                    Text ("Countries")
+                }
+
+                NavigationView {
+                    CountriesMapView()
+                }
+                .tabItem {
+                    Image (systemName: "map")
+                    Text ("Map")
+                }
+            }
+        }
     }
 }
 
