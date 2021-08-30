@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Country: Identifiable {
+struct Country: Identifiable, Hashable {
     var id: String = ""
     var name: String
 

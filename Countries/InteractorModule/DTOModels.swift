@@ -23,10 +23,11 @@ struct CityResponseDTO: Codable {
 }
 
 struct CityDTO: Codable {
-    var id: Int
+    var wikiDataId: String
     var name: String
+    var region: String
     var country: String
     var latitude: Double
     var longitude: Double
-    var population: Int64
+    var population: Double
 }

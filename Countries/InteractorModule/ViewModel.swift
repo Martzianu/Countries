@@ -31,4 +31,29 @@ public class ViewModel {
 
         return Promise(array)
     }
+
+    func fetchCitiesFrom(coutryId: String) -> Promise<[City]> {
+        return self.requestor.fetchCitiesFor(countriesIds: [coutryId])
+            .then { citiesDTO in
+                self.parseCities(dto: citiesDTO)
+            }
+            .catch { _ in
+                print("ERROR!")
+            }
+    }
+
+    private func parseCities(dto: [CityDTO]) -> Promise<[City]> {
+        var array: [City] = []
+        for city in dto {
+            array.append(City(id: city.wikiDataId,
+                              coutryName: city.country,
+                              name: city.name,
+                              region: city.region,
+                              population: city.population,
+                              lat: city.latitude,
+                              long: city.longitude))
+        }
+
+        return Promise(array)
+    }
 }

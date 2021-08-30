@@ -14,8 +14,10 @@ struct CountriesListView: View {
     let viewModel: ScreensViewModel = ScreensViewModel()
     var body: some View {
         ZStack {
-            List(countries) { country in
-                Text(country.name)
+            List(countries, id: \.self) { country in
+                NavigationLink(destination: CitiesListView(country: country)) {
+                    Text(country.name)
+                }
             }
             .onAppear() {
                 isLoading = true
@@ -45,13 +47,5 @@ struct CountriesListView: View {
 struct CountriesListView_Previews: PreviewProvider {
     static var previews: some View {
         CountriesListView()
-    }
-}
-
-struct LoadingView: View {
-    var body: some View {
-        ProgressView()
-            .progressViewStyle(CircularProgressViewStyle(tint: .red))
-            .scaleEffect(5)
     }
 }
