@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (5.4.3)
   - PromisesObjC (1.2.12)
   - PromisesSwift (1.2.12):
     - PromisesObjC (= 1.2.12)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - PromisesSwift (~> 1.2)
 
 SPEC REPOS:
   https://cdn.cocoapods.org/:
+    - Alamofire
     - PromisesObjC
     - PromisesSwift
 
 SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   PromisesSwift: 64085cf6e5fc1b5001f90cf31e87a1f1621fefee
 
-PODFILE CHECKSUM: b0e03652951e95c9addf11a91a3bf8d9b2564449
+PODFILE CHECKSUM: 445b1610a056d450294687dd64b357576042f470
 
 COCOAPODS: 1.10.1

@@ -8,9 +8,10 @@ target 'Countries' do
   # Pods for Countries
 
   pod 'PromisesSwift', '~> 1.2'
+  pod 'Alamofire', '~> 5.2'
 
 
-  target 'CountriesTests' do
+target 'CountriesTests' do
     inherit! :search_paths
     # Pods for testing
   end

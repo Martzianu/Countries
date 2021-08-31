@@ -12,10 +12,14 @@ class CacheRequestor: APIDataRequestor {
 
     /// if we want to get data from the Cache and not the web, use this
     func fetchCountries() -> Promise<Data?> {
-        fatalError("implement")
+        fatalError("not implement")
     }
 
     func fetchCitiesFor(countriesIds: [String]) -> Promise<Data?> {
+        fatalError("not implemented")
+    }
+
+    func fetchNearbyCitiesTo(cityId: String) -> Promise<Data?> {
         fatalError("not implemented")
     }
 }

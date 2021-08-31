@@ -47,4 +47,8 @@ internal class DBGateway {
     func fetchCitiesFor(countriesIds: [String]) -> Promise<Data?> {
         self.requestor.fetchCitiesFor(countriesIds: countriesIds)
     }
+
+    func fetchCitiesNear(cityId: String) -> Promise<Data?> {
+        self.requestor.fetchNearbyCitiesTo(cityId: cityId)
+    }
 }

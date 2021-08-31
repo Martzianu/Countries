@@ -27,6 +27,7 @@ struct CityDTO: Codable {
     var name: String
     var region: String
     var country: String
+    var elevationMeters: Int
     var latitude: Double
     var longitude: Double
     var population: Double

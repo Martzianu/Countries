@@ -12,10 +12,10 @@ internal class Requestor {
 
     /// if somebody wants to use a certain type of data fetching technology, they just select the desired requestor type
     /// Use case: new bombastic technology, but no time to convert all previous API Calls.
-    private var dbGateway: DBGateway = DBGateway(requestorType: .urlSession)
 
     func fetchCountries() -> Promise<[CountryDTO]> {
-        self.dbGateway.fetchCountries()
+        let dbGateway: DBGateway = DBGateway(requestorType: .urlSession)
+        return dbGateway.fetchCountries()
             .then { data in
                 let parser: JSONParser = JSONParser()
                 return Promise(parser.parseCountries(data: data))
@@ -23,7 +23,17 @@ internal class Requestor {
     }
 
     func fetchCitiesFor(countriesIds: [String]) -> Promise<[CityDTO]> {
-        self.dbGateway.fetchCitiesFor(countriesIds: countriesIds)
+        let dbGateway: DBGateway = DBGateway(requestorType: .urlSession)
+        return dbGateway.fetchCitiesFor(countriesIds: countriesIds)
+            .then { data in
+                let parser: JSONParser = JSONParser()
+                return Promise(parser.parseCities(data: data))
+            }
+    }
+
+    func fetchCitiesNear(cityId: String) -> Promise<[CityDTO]> {
+        let dbGateway: DBGateway = DBGateway(requestorType: .alamofire)
+        return dbGateway.fetchCitiesNear(cityId: cityId)
             .then { data in
                 let parser: JSONParser = JSONParser()
                 return Promise(parser.parseCities(data: data))

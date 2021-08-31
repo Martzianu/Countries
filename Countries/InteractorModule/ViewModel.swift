@@ -50,6 +50,7 @@ public class ViewModel {
                               name: city.name,
                               region: city.region,
                               population: city.population,
+                              elevation: city.elevationMeters,
                               lat: city.latitude,
                               long: city.longitude))
         }

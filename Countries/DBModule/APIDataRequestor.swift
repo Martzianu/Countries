@@ -18,4 +18,5 @@ enum APIErrors: Error {
 protocol APIDataRequestor {
     func fetchCountries() -> Promise<Data?>
     func fetchCitiesFor(countriesIds: [String]) -> Promise<Data?>
+    func fetchNearbyCitiesTo(cityId: String) -> Promise<Data?>
 }

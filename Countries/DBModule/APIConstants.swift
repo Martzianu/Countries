@@ -31,5 +31,6 @@ enum Endpoints {
     private static let base: String = "https://wft-geo-db.p.rapidapi.com/v1/geo/"
     static let countries: String = base + "countries"
     static let cities: String = base + "cities"
+    static let nearbyCities: String = base + "cities/%@"
 }
 

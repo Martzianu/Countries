@@ -55,6 +55,10 @@ class URLSessionRequestor: APIDataRequestor {
         }
     }
 
+    func fetchNearbyCitiesTo(cityId: String) -> Promise<Data?> {
+        fatalError("not implemented")
+    }
+
     private func addDefaultHeadersTo(request: inout URLRequest) {
         request.addValue(HeaderValues.apiHost, forHTTPHeaderField: HeaderKeys.rapidAPIHost)
         request.addValue(HeaderValues.apiKey, forHTTPHeaderField: HeaderKeys.rapidAPIKey)
